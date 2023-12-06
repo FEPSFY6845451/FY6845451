@@ -109,9 +109,31 @@
         #references-section p {
             text-align: center;
         }
+         .left-image-container,
+        .right-image-container {
+            flex-basis: 48%; /* Adjust the width based on your preference */
+            margin-bottom: 20px;
+        }
+
+        .left-image-container img,
+        .right-image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
+    <div class="section-container">
+        <div class="left-image-container">
+            <img src="LeonardoPisa.jpg" alt="Left Image" class="images">
+        </div>
+
+        <div class="right-image-container">
+            <img src="FibonacciSpiral.png" alt="Right Image" class="images">
+        </div>
+    </div>
 
     <header>
         <img src="WebBanner2023.png" alt="Banner2023" width="1200" height="300" class="images">
