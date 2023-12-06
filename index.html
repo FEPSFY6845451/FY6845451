@@ -149,6 +149,28 @@ Repairs </h2>
         <script>
             var slideImages = ["slide1.png", "slide2.png", "slide3.png" , "slide4.png", "slide5.png"];
             var currentSlide = 0;
+            function showSlide() {
+                document.getElementById('slide').src = slideImages[currentSlide];
+                )
+                function nextslide() {
+                    currentslide = (currentSlide + 1) % slideimages.length;
+                    showSlide();
+                }    
+
+                    function prevSlide() {
+                        currentslide = (currentSlide - 1 + slideimages.length;) % slideImages.length;
+                        showSlide();
+                        
+                    }    
+
+                     function showSlideNumber(slideNumber) {
+                         currentSlide = slidenumber - 1;
+                         showSlide();
+                     }
+                         
+
+                
+
         </script>
     </article>
 
