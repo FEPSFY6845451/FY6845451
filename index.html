@@ -83,17 +83,9 @@
             justify-content: space-between;
         }
 
-        .section-left {
-            flex-basis: 60%;
-        }
-
+        .section-left,
         .section-right {
-            flex-basis: 30%;
-            box-sizing: border-box;
-        }
-
-        .retracement-container {
-            margin-top: 0;
+            flex-basis: 100%;
         }
 
         .retracement-container img {
@@ -101,6 +93,11 @@
             height: auto;
             float: left;
             margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .retracement-container p {
+            clear: left;
         }
     </style>
 </head>
@@ -153,6 +150,7 @@
 
                 <div class="section-right">
                     <section id="retracement-section" class="retracement-container">
+                        <h2>Fibonacci Retracement in Trading</h2>
                         <p>
                             Between February and July 2005, as the market shot up from 0 to an impressive 95%, smart traders used a tool called Fibonacci retracement. Think of it like a guide that helps them figure out when to buy or sell. The tool highlights specific levels—23.6%, 38.2%, 50%, 61.8%, and 78.6%—where the market might bounce back. When prices dipped, traders placed buy orders near these levels, expecting a rebound. This clever use of Fibonacci retracement made their decisions clearer and helped them make the most of the rising market, turning a complicated situation into a smarter and more successful strategy.
                         </p>
@@ -169,84 +167,84 @@
                 <h2 style="text-align: center;">Why is Fibonacci useful in maths?</h2>
                 <p>The mathematical properties of the Fibonacci sequence reveal a fascinating interplay of numbers and relationships. Each number in the sequence is the sum of the two preceding ones, a recursive pattern that creates an unfolding sequence of growth. This inherent structure not only captures the imagination of mathematicians but also serves as a foundation for exploring the fundamental principles of number theory. The convergence of the Fibonacci sequence to the golden ratio adds a layer of complexity to its mathematical allure. The golden ratio, represented by the irrational number phi (φ), is approximately equal to 1.618033988749895. This ratio is derived from the relationship between consecutive Fibonacci numbers as they approach infinity. The aesthetics of the golden ratio have fascinated mathematicians, artists, and architects for centuries, contributing to the harmony and balance observed in various aspects of our world. In essence, the mathematical properties of the Fibonacci sequence go beyond mere arithmetic; they unveil the elegance embedded in the fabric of numbers. As mathematicians continue to explore the depths of Fibonacci's sequence, new revelations about its properties and applications continue to emerge, further solidifying its place as a mathematical marvel with enduring significance.</p>
             </section>
-
-            <section id="conference-presentation">
-                <h2 style="text-align: center;">Conference Presentation: The Influence of the Fibonacci sequence</h2>
-                <div id="slide-container">
-                    <img id="slide" src="slide1.png" alt="Slide 1" style="width:100%; max-width:800px;">
-                    <div class="button-container">
-                        <button class="button" onclick="prevSlide()">Previous</button>
-                        <button class="button" onclick="nextSlide()">Next</button>
-                    </div>
-                    <div class="slide-number-container">
-                        <button class="button" onclick="showSlideNumber(1)">1</button>
-                        <button class="button" onclick="showSlideNumber(2)">2</button>
-                        <button class="button" onclick="showSlideNumber(3)">3</button>
-                        <button class="button" onclick="showSlideNumber(4)">4</button>
-                        <button class="button" onclick="showSlideNumber(5)">5</button>
-                    </div>
-                </div>
-            </section>
-
-            <style>
-                #slide-container {
-                    text-align: center;
-                    position: relative;
-                }
-
-                .button-container {
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin-bottom: -100px;
-                }
-
-                .button {
-                    padding: 10px 20px;
-                    background-color: #4CAF50;
-                    color: white;
-                    border: none;
-                    border-radius: 5px;
-                    font-size: 16px;
-                    cursor: pointer;
-                    margin: 0 5px;
-                }
-
-                .slide-number-container {
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin-bottom: -50px;
-                }
-            </style>
-            <script>
-                var slideImages = ["slide1.png", "slide2.png", "slide3.png", "slide4.png", "slide5.png"];
-                var currentSlide = 0;
-
-                function showSlide() {
-                    document.getElementById('slide').src = slideImages[currentSlide];
-                }
-
-                function nextSlide() {
-                    currentSlide = (currentSlide + 1) % slideImages.length;
-                    showSlide();
-                }
-
-                function prevSlide() {
-                    currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
-                    showSlide();
-                }
-
-                function showSlideNumber(slideNumber) {
-                    currentSlide = slideNumber - 1;
-                    showSlide();
-                }
-
-                showSlide(); // Show the initial slide when the page loads
-            </script>
         </div>
+
+        <section id="conference-presentation">
+            <h2 style="text-align: center;">Conference Presentation: The Influence of the Fibonacci sequence</h2>
+            <div id="slide-container">
+                <img id="slide" src="slide1.png" alt="Slide 1" style="width:100%; max-width:800px;">
+                <div class="button-container">
+                    <button class="button" onclick="prevSlide()">Previous</button>
+                    <button class="button" onclick="nextSlide()">Next</button>
+                </div>
+                <div class="slide-number-container">
+                    <button class="button" onclick="showSlideNumber(1)">1</button>
+                    <button class="button" onclick="showSlideNumber(2)">2</button>
+                    <button class="button" onclick="showSlideNumber(3)">3</button>
+                    <button class="button" onclick="showSlideNumber(4)">4</button>
+                    <button class="button" onclick="showSlideNumber(5)">5</button>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            #slide-container {
+                text-align: center;
+                position: relative;
+            }
+
+            .button-container {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: -100px;
+            }
+
+            .button {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                margin: 0 5px;
+            }
+
+            .slide-number-container {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: -50px;
+            }
+        </style>
+        <script>
+            var slideImages = ["slide1.png", "slide2.png", "slide3.png", "slide4.png", "slide5.png"];
+            var currentSlide = 0;
+
+            function showSlide() {
+                document.getElementById('slide').src = slideImages[currentSlide];
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideImages.length;
+                showSlide();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+                showSlide();
+            }
+
+            function showSlideNumber(slideNumber) {
+                currentSlide = slideNumber - 1;
+                showSlide();
+            }
+
+            showSlide(); // Show the initial slide when the page loads
+        </script>
     </article>
 
 </body>
