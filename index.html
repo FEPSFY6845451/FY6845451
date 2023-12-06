@@ -122,6 +122,21 @@
             display: block;
             margin: 0 auto;
         }
+
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .section-left,
+        .section-right {
+            flex-basis: 48%; /* Adjust the width based on your preference */
+        }
+
+        table {
+            flex-basis: 100%; /* Ensure the table takes up the full width */
+        }
     </style>
 </head>
 <body>
