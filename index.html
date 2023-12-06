@@ -144,82 +144,81 @@
             The convergence of the Fibonacci sequence to the golden ratio adds a layer of complexity to its mathematical allure. The golden ratio, represented by the irrational number phi (φ), is approximately equal to 1.618033988749895. This ratio is derived from the relationship between consecutive Fibonacci numbers as they approach infinity. The aesthetics of the golden ratio have fascinated mathematicians, artists, and architects for centuries, contributing to the harmony and balance observed in various aspects of our world.
             In essence, the mathematical properties of the Fibonacci sequence go beyond mere arithmetic; they unveil the elegance embedded in the fabric of numbers. As mathematicians continue to explore the depths of Fibonacci's sequence, new revelations about its properties and applications continue to emerge, further solidifying its place as a mathematical marvel with enduring significance.</p>
         </section>
-<h2> Conference Presentation: Bridge Deck
-Repairs </h2>
+
+        <section id="conference-presentation">
+            <h2>Conference Presentation: Bridge Deck Repairs</h2>
+            <div id="slide-container">
+                <img id="slide" src="slide1.png" alt="Slide 1" style="width:100%; max-width:800px;">
+                <div class="button-container">
+                    <button class="button" onclick="prevSlide()">Previous</button>
+                    <button class="button" onclick="nextSlide()">Next</button>
+                </div>
+                <div class="slide-number-container">
+                    <button class="button" onclick="showSlideNumber(1)">1</button>
+                    <button class="button" onclick="showSlideNumber(2)">2</button>
+                    <button class="button" onclick="showSlideNumber(3)">3</button>
+                    <button class="button" onclick="showSlideNumber(4)">4</button>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            #slide-container {
+                text-align: center; 
+                position: relative;
+            }
+
+            .button-container {
+                position: absolute;
+                bottom: 0; 
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: -100px; 
+            }
+
+            .button {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px; 
+                font-size: 16px; 
+                cursor: pointer;
+                margin: 0 5px; 
+            }
+
+            .slide-number-container {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: -50px; 
+            }
+        </style>
         <script>
             var slideImages = ["slide1.png", "slide2.png", "slide3.png" , "slide4.png", "slide5.png"];
             var currentSlide = 0;
+            
             function showSlide() {
                 document.getElementById('slide').src = slideImages[currentSlide];
-                )
-                function nextslide() {
-                    currentslide = (currentSlide + 1) % slideimages.length;
-                    showSlide();
-                }    
+            }
 
-                    function prevSlide() {
-                        currentslide = (currentSlide - 1 + slideimages.length;) % slideImages.length;
-                        showSlide();
-                        
-                    }    
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideImages.length;
+                showSlide();
+            }
 
-                     function showSlideNumber(slideNumber) {
-                         currentSlide = slidenumber - 1;
-                         showSlide();
-                     }
-                ‹div id="slide-container">
-                    <img id="slide" src="slide1.png" alt="Slide 1" style="width:100%; max-width:800px;">
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+                showSlide();
+            }
 
-         ‹div class="button-container">
-        <button class="button" onclick="prevSlide()">Previous</button>
-      <button class="button" onclick="nextSlide()">Next</button>
-</div>
+            function showSlideNumber(slideNumber) {
+                currentSlide = slideNumber - 1;
+                showSlide();
+            }
 
-        ‹div class="slide-number-container'>
-    ‹button class="button" onclick="showSlideNumber(1)">1</button> 
-    <button class="button" onclick="showSlideNumber(2)">2</button> 
-    <button class="button" onclick="showSlideNumber(3)">3</button> 
-    <button class="button" onclick="showSlideNumber(4)">4</button>
-            </div>             
-
-  ‹style>
-
-#slide-container {
-text-align: center; 
-position: relative;
-}
-
-.button-container { 
-position: absolute;
-bottom: 0; 
-left: 50%;
-transform: translateX(-50%);
-margin-bottom: -100px; 
-}
-
-.button {
-padding: 10px 20px;
-background-color: #4CAF50;
-color: white;
-border: none;
-border-radius: 5px; 
-font-size: 16px; 
-cursor: pointer;
-margin: 0 5px; 
-}
-
-.slide-number-container ( 
-position: absolute;
-bottom: 0;
-left:
-50%;
-transform: translateX (-50%);
-margin-bottom: -50px; 
-}
-
-    </style>
-                
-
+            showSlide(); // Show the initial slide when the page loads
         </script>
     </article>
 
