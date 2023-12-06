@@ -137,61 +137,42 @@
             </section>
         </div>
        
-        <section id="conference-presentation">
-            <h2>Conference Presentation: The Influence of the Fibonacci sequence</h2>
-            <div id="slide-container">
-                <img id="slide" src="slide1.png" alt="Slide 1" style="width:100%; max-width:800px;">
-                <div class="button-container">
-                    <button class="button" onclick="prevSlide()">Previous</button>
-                    <button class="button" onclick="nextSlide()">Next</button>
+  <section id="conference-presentation" class="conference-section">
+                <div class="black-line-conference"></div>
+                <h2 class="conference-header">Conference Presentation: Bridge Deck Repairs</h2>
+                <div id="slide-container">
+                    <img id="slide" src="slide1.png" alt="Slide 1" style="width:100%; max-width:800px;">
+                    <div class="button-container">
+                        <button class="button" onclick="prevSlide()">Previous</button>
+                        <button class="button" onclick="nextSlide()">Next</button>
+                    </div>
+                    <div class="slide-number-container">
+                        <button class="button" onclick="showSlideNumber(1)">1</button>
+                        <button class="button" onclick="showSlideNumber(2)">2</button>
+                        <button class="button" onclick="showSlideNumber(3)">3</button>
+                        <button class="button" onclick="showSlideNumber(4)">4</button>
+                    </div>
                 </div>
-                <div class="slide-number-container">
-                    <button class="button" onclick="showSlideNumber(1)">1</button>
-                    <button class="button" onclick="showSlideNumber(2)">2</button>
-                    <button class="button" onclick="showSlideNumber(3)">3</button>
-                    <button class="button" onclick="showSlideNumber(4)">4</button>
-                    <button class="button" onclick="showSlideNumber(5)">5</button>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <style>
-            #slide-container {
-                text-align: center; 
-                position: relative;
+            .black-line-conference {
+                border-top: 5px solid #000;
+                margin-bottom: 20px;
             }
 
-            .button-container {
+            .conference-header {
                 position: absolute;
-                bottom: 0; 
+                top: 50%;
                 left: 50%;
-                transform: translateX(-50%);
-                margin-bottom: -100px; 
-            }
-
-            .button {
-                padding: 10px 20px;
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                border-radius: 5px; 
-                font-size: 16px; 
-                cursor: pointer;
-                margin: 0 5px; 
-            }
-
-            .slide-number-container {
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                margin-bottom: -50px; 
+                transform: translate(-50%, -50%);
             }
         </style>
         <script>
-            var slideImages = ["slide1.png", "slide2.png", "slide3.png" , "slide4.png", "slide5.png"];
+            var slideImages = ["slide1.png", "slide2.png", "slide3.png", "slide4.png", "slide5.png"];
             var currentSlide = 0;
-            
+
             function showSlide() {
                 document.getElementById('slide').src = slideImages[currentSlide];
             }
@@ -211,7 +192,7 @@
                 showSlide();
             }
 
-            showSlide(); 
+            showSlide(); // Show the initial slide when the page loads
         </script>
     </article>
 
