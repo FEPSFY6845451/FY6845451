@@ -9,19 +9,19 @@
             font-family: 'Arial', sans-serif;
             margin: 20px;
             line-height: 1.6;
-            background-color: #fff; 
+            background-color: #fff;
         }
 
         header {
             text-align: center;
             padding: 20px;
-            background-color: rgba(51, 51, 51, 0)
+            background-color: rgba(51, 51, 51, 0);
             color: #fff;
         }
 
         h1 {
             margin-bottom: 0;
-            color: #000; /
+            color: #000;
         }
 
         .student-info {
@@ -61,8 +61,8 @@
         }
 
         table {
-            margin: 0 auto; 
-            width: 20%; 
+            margin: 0 auto;
+            width: 20%;
             border-collapse: collapse;
             margin-bottom: 10px;
         }
@@ -75,6 +75,34 @@
 
         th {
             background-color: #f2f2f2;
+        }
+
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .section-left,
+        .section-right {
+            flex-basis: 100%;
+        }
+
+        .retracement-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .retracement-container p {
+            text-align: center;
+        }
+
+        h2, h2 img, p {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
         }
     </style>
 </head>
@@ -90,13 +118,11 @@
         <div class="black-line"></div>
     </div>
 
-
     <div class="blurb">
         <h2>Breaking News: Fibonacci Sequence Shaping Our World</h2>
         <p>In a groundbreaking revelation, the pervasive influence of the Fibonacci sequence has been uncovered, weaving its way through nature, architecture, finance, and the arts.</p>
     </div>
 
-  
     <table>
         <tr>
             <th>Table of Contents</th>
@@ -108,36 +134,31 @@
         <tr><td><a href="#maths-section">Why is Fibonacci useful in maths?</a></td></tr>
     </table>
 
-    
     <article>
         <div class="article-container">
             <section id="introduction-section">
-                <h2 style="text-align: center;">Introduction</h2>
+                <h2>Introduction</h2>
                 <p>The story of the Fibonacci sequence unfolds with the 12th-century Italian mathematician Leonardo of Pisa, or Fibonacci. Born around 1175 in Pisa, Italy, Fibonacci played a pivotal role in introducing the Western world to the Hindu-Arabic numeral system and the captivating Fibonacci sequence.</p>
             </section>
 
-<div class="section-container">
-                
+            <div class="section-container">
                 <div class="section-left">
                     <section id="applications-nature-section">
                         <h2>Applications of Fibonacci in Real World</h2>
-                        <p>
-                            Nature exhibits an inherent adherence to the Fibonacci sequence, visible in the arrangement of leaves, petals, and seeds in plants. The spiral patterns seen in sunflowers and pinecones often follow the Fibonacci sequence, highlighting the mathematical order present in the biological world. In the realm of art and design, Fibonacci's influence is equally pronounced. Renowned artists and architects, both historically and in contemporary times, have integrated Fibonacci's sequence and the golden ratio into their works. From classical structures like the Parthenon to modern design, these mathematical principles contribute to the aesthetic appeal and balance of various creations.
-                        </p>
-                                        <img src="dotdash.jpg" alt="Figure 1" width="300" height="300" class="images">
-
+                        <img src="dotdash.jpg" alt="Figure 1" width="300" height="300" class="images">
+                        <p>Figure 1: The Stock Market in 2005 </p>
+                        <p>Nature exhibits an inherent adherence to the Fibonacci sequence, visible in the arrangement of leaves, petals, and seeds in plants. The spiral patterns seen in sunflowers and pinecones often follow the Fibonacci sequence, highlighting the mathematical order present in the biological world. In the realm of art and design, Fibonacci's influence is equally pronounced. Renowned artists and architects, both historically and in contemporary times, have integrated Fibonacci's sequence and the golden ratio into their works. From classical structures like the Parthenon to modern design, these mathematical principles contribute to the aesthetic appeal and balance of various creations.</p>
                     </section>
                 </div>
 
                 <div class="section-right">
                     <section id="retracement-section" class="retracement-container">
-                        <p>Figure 1: The Stock Market in 2005 </p> 
                         <p>
                             Between February and July 2005, as the market shot up from 0 to an impressive 95%, smart traders used a tool called Fibonacci retracement. Think of it like a guide that helps them figure out when to buy or sell. The tool highlights specific levels—23.6%, 38.2%, 50%, 61.8%, and 78.6%—where the market might bounce back. When prices dipped, traders placed buy orders near these levels, expecting a rebound. This clever use of Fibonacci retracement made their decisions clearer and helped them make the most of the rising market, turning a complicated situation into a smarter and more successful strategy.
                         </p>
                     </section>
                 </div>
-            </div>
+            
 
 
             <section id="computing-section">
